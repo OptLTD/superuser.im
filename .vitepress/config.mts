@@ -1,25 +1,17 @@
 import { defineConfig } from 'vitepress'
 
+import { shared } from './shared'
+import { enUS } from './en-US'
+import { zhCN } from './zh-CN'
+
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
+  ...shared,
   title: "SUPERUSER",
   description: "Data is valuable, check it now.",
   locales: {
-    root: {
-      label: '中文',
-      lang: 'zh-CN',
-      link: '/zh-CN/index',
-    },
-    en: {
-      label: 'English',
-      link: '/en-US/index',
-      lang: 'en-US', 
-    },
-    fr: {
-      label: 'French',
-      lang: 'fr-FR', 
-      link: '/fr-FR/index',
-    }
+    en: { label: 'English', ...enUS },
+    root: { label: '简体中文', ...zhCN },
   },
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
