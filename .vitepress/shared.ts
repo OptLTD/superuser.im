@@ -7,6 +7,10 @@ export const shared = defineConfig({
   cleanUrls: true,
   metaChunk: true,
 
+  rewrites: {
+    'zh/:rest*': ':rest*'
+  },
+
   markdown: {
     math: true,
     codeTransformers: [
@@ -20,7 +24,7 @@ export const shared = defineConfig({
   },
 
   sitemap: {
-    hostname: 'https://vitepress.dev',
+    hostname: 'https://superuser.im',
     transformItems(items) {
       return items.filter((item) => !item.url.includes('migration'))
     }

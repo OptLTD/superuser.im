@@ -4,16 +4,16 @@ import { defineConfig, type DefaultTheme } from 'vitepress'
 const require = createRequire(import.meta.url)
 const pkg = require('vitepress/package.json')
 
-export const enUS = defineConfig({
-  lang: 'en-US',
+export const en = defineConfig({
+  lang: 'en',
   description: 'Vite & Vue powered static site generator.',
 
   themeConfig: {
     nav: nav(),
 
     sidebar: {
-      '/guide/': { base: '/guide/', items: sidebarGuide() },
-      '/price/': { base: '/price/', items: sidebarReference() }
+      '/en/guide/': { base: '/guide/', items: sidebarGuide() },
+      '/en/price/': { base: '/price/', items: sidebarReference() }
     },
 
     footer: {
@@ -27,12 +27,12 @@ function nav(): DefaultTheme.NavItem[] {
   return [
     {
       text: 'Guide',
-      link: '/guide/what-is-vitepress',
+      link: '/en/guide/what-is-vitepress',
       activeMatch: '/guide/'
     },
     {
       text: 'Reference',
-      link: '/reference/site-config',
+      link: '/en/reference/site-config',
       activeMatch: '/reference/'
     },
     {

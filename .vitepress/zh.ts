@@ -4,7 +4,7 @@ import { defineConfig, type DefaultTheme } from 'vitepress'
 const require = createRequire(import.meta.url)
 const pkg = require('vitepress/package.json')
 
-export const zhCN = defineConfig({
+export const zh = defineConfig({
   lang: 'zh-Hans',
   description: '由 Vite 和 Vue 驱动的静态站点生成器',
 
@@ -42,7 +42,7 @@ export const zhCN = defineConfig({
     darkModeSwitchTitle: '切换到深色模式',
 
     sidebar: {
-      '/zh-CN/guide/': { base: '/zh-CN/guide/', items: sidebarGuide() },
+      '/guide/': { base: '/guide/', items: sidebarGuide() },
     },
   }
 })
@@ -51,18 +51,18 @@ function nav(): DefaultTheme.NavItem[] {
   return [
     {
       text: 'Demo',
-      link: '/zh-CN/apps/',
-      activeMatch: '/zh-CN/apps/'
+      link: '/apps/1.get-start',
+      activeMatch: '/apps/'
     },
     {
       text: '指南',
-      link: '/zh-CN/guide/getting-start',
-      activeMatch: '/zh-CN/guide/'
+      link: '/guide/1.introduction',
+      activeMatch: '/guide/'
     },
     {
       text: 'API',
-      link: '/zh-CN/apis/site-config',
-      activeMatch: '/zh-CN/apis/'
+      link: '/apis/site-config',
+      activeMatch: '/apis/'
     },
   ]
 }
@@ -109,7 +109,7 @@ function sidebarGuide(): DefaultTheme.SidebarItem[] {
         { text: 'sitemap 生成', link: 'sitemap-generation' }
       ]
     },
-    { text: '配置和 API 参考', base: '/zh-CN/reference/', link: 'site-config' }
+    { text: '配置和 API 参考', base: '/reference/', link: 'site-config' }
   ]
 }
 
