@@ -50,14 +50,14 @@ export const zh = defineConfig({
 function nav(): DefaultTheme.NavItem[] {
   return [
     {
+      text: '指南',
+      link: '/guide/introduction',
+      activeMatch: '/guide/'
+    },
+    {
       text: 'Demo',
       link: '/apps/1.get-start',
       activeMatch: '/apps/'
-    },
-    {
-      text: '指南',
-      link: '/guide/1.introduction',
-      activeMatch: '/guide/'
     },
     {
       text: 'API',
@@ -73,10 +73,14 @@ function sidebarGuide(): DefaultTheme.SidebarItem[] {
       text: '简介',
       collapsed: false,
       items: [
-        { text: '什么是 VitePress？', link: 'what-is-vitepress' },
-        { text: '快速开始', link: 'getting-started' },
-        { text: '路由', link: 'routing' },
-        { text: '部署', link: 'deploy' }
+        { text: '系统简介', link: 'introduction' },
+        { text: '快速开始', link: 'quick-start' },
+        { text: '安装部署', link: 'installation' },
+        { text: '基础概念', link: 'basic-concept' },
+        { text: '成员管理', link: 'team-manage' },
+        { text: '角色配置', link: 'config-roles' },
+        { text: '模型配置', link: 'config-model' },
+        { text: '页面配置', link: 'config-menus' },
       ]
     },
     {
@@ -88,17 +92,6 @@ function sidebarGuide(): DefaultTheme.SidebarItem[] {
         { text: 'frontmatter', link: 'frontmatter' },
         { text: '在 Markdown 使用 Vue', link: 'using-vue' },
         { text: '国际化', link: 'i18n' }
-      ]
-    },
-    {
-      text: '自定义',
-      collapsed: false,
-      items: [
-        { text: '自定义主题', link: 'custom-theme' },
-        { text: '扩展默认主题', link: 'extending-default-theme' },
-        { text: '构建时数据加载', link: 'data-loading' },
-        { text: 'SSR 兼容性', link: 'ssr-compat' },
-        { text: '连接 CMS', link: 'cms' }
       ]
     },
     {
