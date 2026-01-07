@@ -1,14 +1,14 @@
 import { defineConfig } from 'vitepress'
 
 export const shared = defineConfig({
-  title: 'VitePress',
+  title: 'SuperUser',
 
   lastUpdated: true,
   cleanUrls: true,
   metaChunk: true,
 
   rewrites: {
-    'zh/:rest*': ':rest*'
+    'zh-CN/:rest*': ':rest*'
   },
 
   markdown: {
@@ -32,23 +32,28 @@ export const shared = defineConfig({
 
   /* prettier-ignore */
   head: [
-    ['link', { rel: 'icon', type: 'image/svg+xml', href: '/vitepress-logo-mini.svg' }],
-    ['link', { rel: 'icon', type: 'image/png', href: '/vitepress-logo-mini.png' }],
+    ['link', { rel: 'icon', type: 'image/svg+xml', href: '/logo.svg' }],
+    ['link', { rel: 'icon', type: 'image/png', href: '/logo.png' }],
     ['meta', { name: 'theme-color', content: '#5f67ee' }],
     ['meta', { property: 'og:type', content: 'website' }],
-    ['meta', { property: 'og:locale', content: 'en' }],
-    ['meta', { property: 'og:title', content: 'VitePress | Vite & Vue Powered Static Site Generator' }],
-    ['meta', { property: 'og:site_name', content: 'VitePress' }],
-    ['meta', { property: 'og:image', content: 'https://vitepress.dev/vitepress-og.jpg' }],
-    ['meta', { property: 'og:url', content: 'https://vitepress.dev/' }],
-    ['script', { src: 'https://cdn.usefathom.com/script.js', 'data-site': 'AZBRSFGG', 'data-spa': 'auto', defer: '' }]
+    ['meta', { property: 'og:locale', content: 'en-US' }],
+    ['meta', { property: 'og:site_name', content: 'SuperUser' }],
+    ['meta', { property: 'og:title', content: 'SuperUser | Module Data Management Platform' }],
+    ['meta', { property: 'og:image', content: 'https://superuser.im/logo.png' }],
+    ['meta', { property: 'og:url', content: 'https://superuser.im/' }],
+    // ['script', { src: 'https://cdn.usefathom.com/script.js', 'data-site': 'AZBRSFGG', 'data-spa': 'auto', defer: '' }]
   ],
 
   themeConfig: {
-    logo: { src: '/vitepress-logo-mini.svg', width: 24, height: 24 },
-
+    logo: {
+      src: '/logo.svg',
+      width: 36, height: 36,
+    },
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/vuejs/vitepress' }
+      {
+        icon: 'github',
+        link: 'https://github.com/OptLTD/superuser.im'
+      }
     ],
   }
 })

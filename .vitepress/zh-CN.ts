@@ -4,11 +4,12 @@ import { defineConfig, type DefaultTheme } from 'vitepress'
 const require = createRequire(import.meta.url)
 const pkg = require('vitepress/package.json')
 
-export const zh = defineConfig({
+export const zhCN = defineConfig({
   lang: 'zh-Hans',
   description: '由 Vite 和 Vue 驱动的静态站点生成器',
 
   themeConfig: {
+
     nav: nav(),
 
 
