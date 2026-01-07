@@ -119,6 +119,7 @@
  * -------------------------------------------------------------------------- */
 
 :root {
+  --vp-nav-logo-height: 36px !important;
   --vp-custom-block-tip-border: transparent;
   --vp-custom-block-tip-text: var(--vp-c-text-1);
   --vp-custom-block-tip-bg: var(--vp-c-brand-soft);

@@ -5,7 +5,7 @@ layout: home
 hero:
   name: "SUPERUSER"
   text: "不只是多维表格，更是业务利器"
-  tagline: "像搭积木一样，定制您的企业级解决方案"
+  tagline: "就像搭积木一样简单，定制您的专属解决方案"
   actions:
     - theme: brand
       text: 快速开始
