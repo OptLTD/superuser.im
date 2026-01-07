@@ -56,14 +56,8 @@ function nav(): DefaultTheme.NavItem[] {
       activeMatch: '/guide/'
     },
     {
-      text: 'Demo',
-      link: '/apps/1.get-start',
-      activeMatch: '/apps/'
-    },
-    {
-      text: 'API',
-      link: '/apis/site-config',
-      activeMatch: '/apis/'
+      text: '在线体验',
+      link: 'http://app.opt.ltd:8080',
     },
   ]
 }

@@ -53,7 +53,7 @@ export const shared = defineConfig({
       {
         icon: 'github',
         link: 'https://github.com/OptLTD/superuser.im'
-      }
+      },
     ],
   }
 })
