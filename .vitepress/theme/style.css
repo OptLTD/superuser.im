@@ -225,47 +225,60 @@
   .VPHomeHero .image{
     margin: 20px  0px 20px!important;
   }
-  .VPFeature .box{
-    display: block!important;
-  }
-  .VPFeature .icon{
-    float: left!important;
-    height: 24px!important;
-    width: 24px!important;
-    margin-right: 10px!important;
-    margin-bottom: 0px!important;
-    background-color: unset!important;
-  }
-  .VPFeature .title{
-    font-size: 20px!important;
-  }
-  /* .VPFeature .details{
-    padding-top: 0!important;
-  } */
 }
 
-/* FeatureCard 容器样式 */
-.feature-card {
-  margin: 4rem auto;
+/* 对比表格中的 check 和 cross 样式 */
+.check {
+  color: var(--vp-c-success-1, #10b981);
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+.cross {
+  color: var(--vp-c-danger-1, #ef4444);
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+/* Features 部分样式优化 */
+.VPFeatures {
+  margin: 6rem auto 4rem;
   max-width: 1400px;
-  padding: 0 2rem;
+  padding: 0 1rem;
+  position: relative;
 }
 
-.feature-card:first-child {
-  margin-top: 3rem;
+.VPFeatures::before {
+  content: '核心特性';
+  display: block;
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--vp-c-text-1);
+  margin-bottom: 3rem;
+  letter-spacing: -0.02em;
 }
 
-.feature-card:last-child {
-  margin-bottom: 4rem;
+
+.VPFeature {
+  padding: 5px !important;
+  background-color: var(--vp-c-bg)!important;
+  box-shadow: var(--vp-shadow-1) !important;
+}
+.VPFeature:hover {
+  box-shadow: var(--vp-shadow-3) !important;
+}
+.VPFeature .title{
+  font-size: 1.25rem!important;
+  font-weight: 700!important;
+  color: var(--vp-c-text-1)!important;
+  margin-bottom: 1rem!important;
+  letter-spacing: -0.02em!important;
+}
+.VPFeature .details{
+  font-size: 14px!important;
+  line-height: 2!important;
+  color: var(--vp-c-text-3)!important;
 }
 
-@media (max-width: 768px) {
-  .feature-card {
-    margin: 2.5rem auto;
-    padding: 0 1rem;
-  }
-  
-  .feature-card:first-child {
-    margin-top: 2rem;
-  }
-}
+

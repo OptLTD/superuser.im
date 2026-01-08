@@ -8,6 +8,9 @@ import MyHeroImage from './components/MyHeroImage.vue'
 import FeatureCard from './components/FeatureCard.vue'
 import UseCaseCard from './components/UseCaseCard.vue'
 import UseStepCard from './components/UseStepCard.vue'
+import PricingCard from './components/PricingCard.vue'
+import CompareCard from './components/CompareCard.vue'
+import FinalCTA from './components/FinalCTA.vue'
 
 export default {
   extends: DefaultTheme,
@@ -25,5 +28,8 @@ export default {
     app.component('FeatureCard', FeatureCard)
     app.component('UseCaseCard', UseCaseCard)
     app.component('UseStepCard', UseStepCard)
+    app.component('PricingCard', PricingCard)
+    app.component('CompareCard', CompareCard)
+    app.component('FinalCTA', FinalCTA)
   }
 } satisfies Theme
