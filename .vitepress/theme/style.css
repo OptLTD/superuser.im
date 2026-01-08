@@ -208,6 +208,12 @@
 
 /* 移动端样式修复 */
 @media (max-width: 768px) {
+  .VPHero.has-image .container {
+    flex-direction: column-reverse;
+  }
+  .VPHero.has-image .main .name {
+    display: none;
+  }
   .VPHomeHero {
     padding-top: var(--vp-nav-height)!important;
   }

@@ -217,8 +217,8 @@ const getClazz = (value) => {
   }
   
   .tab-button {
-    padding: 0.5rem 1rem;
-    font-size: 0.875rem;
+    padding: 5px 10px;
+    font-size: 13px;
   }
   
   .hero-image-container {

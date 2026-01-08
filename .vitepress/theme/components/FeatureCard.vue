@@ -121,8 +121,10 @@ defineProps({
 
 @media (max-width: 640px) {
   .feature-card {
-    padding: 1.5rem;
     gap: 1.5rem;
+    border-radius: 0px;
+    padding: 1.5rem;
+    margin: 12px -24px;
   }
   
   .feature-content .title {
