@@ -1,5 +1,5 @@
 <template>
-  <div class="animated-background">
+  <div class="animated-background" :style="{ opacity: backgroundOpacity }">
     <!-- 渐变背景层 -->
     <div class="gradient-layer"></div>
     
@@ -23,6 +23,8 @@
 </template>
 
 <script setup>
+import { ref, onMounted, onUnmounted } from 'vue'
+
 // 为每个光点生成随机样式
 const getGlowPointStyle = (index) => {
   const delay = index * 1.5
@@ -39,6 +41,36 @@ const getGlowPointStyle = (index) => {
     '--size': `${size}px`
   }
 }
+
+// 背景透明度控制
+const backgroundOpacity = ref(1)
+
+const handleScroll = () => {
+  const scrollY = window.scrollY || window.pageYOffset
+  const viewportHeight = window.innerHeight
+  
+  // 第一屏到第二屏的滚动范围（0 到 100vh）
+  // 在这个范围内，透明度从 1 变为 0.25
+  if (scrollY <= viewportHeight) {
+    // 计算透明度：从 1 线性过渡到 0.25
+    const progress = scrollY / viewportHeight
+    backgroundOpacity.value = 1 - (progress * 0.75) // 1 -> 0.25
+  } else {
+    // 超过第二屏后，保持 0.25
+    backgroundOpacity.value = 0.25
+  }
+}
+
+onMounted(() => {
+  // 初始化透明度
+  handleScroll()
+  // 监听滚动事件，使用 passive 提升性能
+  window.addEventListener('scroll', handleScroll, { passive: true })
+})
+
+onUnmounted(() => {
+  window.removeEventListener('scroll', handleScroll)
+})
 </script>
 
 <style scoped>
@@ -51,6 +83,7 @@ const getGlowPointStyle = (index) => {
   overflow: hidden;
   z-index: 0;
   pointer-events: none;
+  transition: opacity 0.3s ease-out;
 }
 
 /* 渐变背景层 */

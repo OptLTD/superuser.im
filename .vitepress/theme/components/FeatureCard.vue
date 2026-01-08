@@ -4,10 +4,6 @@ defineProps({
     type: String,
     required: true
   },
-  description: {
-    type: String,
-    required: true
-  },
   reverse: {
     type: Boolean,
     default: false
@@ -16,12 +12,13 @@ defineProps({
 </script>
 
 <template>
-  <div :class="['feature-card', { reverse: reverse }]">
-    <div class="feature-content">
-      <h3 class="title">{{ title }}</h3>
-      <p class="desc">{{ description }}</p>
-      <div class="list">
-        <slot name="list" />
+  <div :class="['feature-card', { reverse }]">
+    <div class="feature-main">
+      <h3 class="title">
+        {{ title }}
+      </h3>
+      <div class="intro">
+        <slot name="intro" />
       </div>
     </div>
     <div class="feature-image">
@@ -32,50 +29,49 @@ defineProps({
 
 <style scoped>
 .feature-card {
+  gap: 1rem;
   display: flex;
   align-items: center;
-  gap: 1rem;
-  padding: 2rem;
-  border-radius: 12px;
-  transition: all 0.3s ease;
-  min-height: 400px;
-}
-
-.feature-card:hover {
-  background: var(--vp-c-bg);
-  box-shadow: var(--vp-shadow-5);
-  border-color: var(--vp-c-brand);
+  /* min-height: 400px; */
 }
 
 .feature-card.reverse {
   flex-direction: row-reverse;
 }
 
-.feature-content {
-  flex: 1;
+.feature-main,
+.feature-image {
+  height: 360px;
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+}
+.feature-main:hover,
+.feature-image:hover{
+  box-shadow: var(--vp-shadow-5);
 }
 
-.feature-content .title {
+.feature-main {
+  width: 400px;
+  padding: 1.5rem;
+  border-radius: 12px;
+  background: var(--vp-c-bg);
+  border-color: var(--vp-c-brand);
+}
+
+.feature-main .title {
+  margin: 12px 0;
   font-size: 1.5rem;
   font-weight: 500;
   line-height: 1.2;
   color: var(--vp-c-text-1);
-  margin: 0;
 }
-
-.feature-content .desc {
-  font-size: 1.125rem;
-  line-height: 1.2;
+.feature-main .intro {
+  font-size: 15px;
+  line-height: 1.5;
   color: var(--vp-c-text-2);
-  margin: 0;
 }
-
-.feature-content .list {
-  font-size: 1rem;
-  margin-top: 0.5rem;
+.feature-main .intro:deep(p) {
+  margin-bottom: 2rem;
 }
 
 .feature-image {
@@ -83,12 +79,11 @@ defineProps({
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 300px;
 }
 
 .feature-image :deep(img) {
+  height: 100%;
   max-width: 100%;
-  height: auto;
   border-radius: 0.5rem;
   box-shadow: var(--vp-shadow-2);
 }
@@ -105,12 +100,17 @@ defineProps({
   .feature-card.reverse {
     flex-direction: column !important;
   }
+
+  .feature-main{
+    width: auto;
+    height: auto;
+  }
   
-  .feature-content .title {
+  .feature-main .title {
     font-size: 1rem;
   }
   
-  .feature-content .desc {
+  .feature-main .intro {
     font-size: 1rem;
   }
   
@@ -127,11 +127,11 @@ defineProps({
     margin: 12px -24px;
   }
   
-  .feature-content .title {
+  .feature-main .title {
     font-size: 1.75rem;
   }
   
-  .feature-content .desc {
+  .feature-main .intro {
     font-size: 0.95rem;
   }
 }

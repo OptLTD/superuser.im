@@ -15,16 +15,13 @@ hero:
       link: /guide/introduction
 ---
 
-<FeatureCard
-  title="告别繁琐配置"
-  description="模块化设计，实现真正开箱即用。内置 TMS、CRM、工单系统等丰富模块，满足不同业务场景需求。"
->
-  <template #icon>⚙️</template>
-  <template #list>
+<FeatureCard title="开箱即用，即刻提效">
+  <template #intro>
+    <p>采用独特的模块化设计，彻底告别繁琐的初始配置。您所需的TMS、CRM、工单系统等核心功能，均已就绪，助您业务迅速上线。</p>
     <ul class="feature-list">
-      <li>内置 TMS、CRM、工单系统等丰富模块</li>
-      <li>满足不同业务场景需求</li>
-      <li>真正开箱即用，无需复杂配置</li>
+      <li>独特的模块化设计，彻底告别繁琐的初始配置</li>
+      <li>TMS、CRM、工单系统等核心功能均已就绪</li>
+      <li>助您业务迅速上线，即刻提效</li>
     </ul>
   </template>
   <template #image>
@@ -32,15 +29,13 @@ hero:
   </template>
 </FeatureCard>
 
-<FeatureCard
-  title="打破技术限制" :reverse="true"
-  description="无代码核心，支持灵活自定义。让您无需编写代码即可完成复杂的业务配置。"
->
-  <template #list>
+<FeatureCard title="灵活定制，无需代码" reverse>
+  <template #intro>
+    <p>强大的无代码核心，让业务人员也能轻松调整字段、模型、流程、权限与界面。您的业务如何变化，平台就能如何随需而变。</p>
     <ul class="feature-list">
-      <li>支持修改字段、业务模型等</li>
-      <li>支持配置插件、业务流程等</li>
-      <li>支持配置权限、页面视图等</li>
+      <li>强大的无代码核心，业务人员也能轻松调整</li>
+      <li>支持调整字段、模型、流程、权限与界面</li>
+      <li>平台随需而变，适应业务变化</li>
     </ul>
   </template>
   <template #image>
@@ -48,15 +43,13 @@ hero:
   </template>
 </FeatureCard>
 
-<FeatureCard
-  title="告别办公束缚"
-  description="移动端友好，让您随时随地办公。任意模块都可以在移动端操作，并且交互友好操作便捷。"
->
-  <template #list>
+<FeatureCard title="全端协同，移动办公">
+  <template #intro>
+    <p>提供真正移动端友好的体验，所有模块操作流畅便捷。结合实时通知，让团队协作突破时空束缚，随时随地高效推进。</p>
     <ul class="feature-list">
-      <li>任意模块都可以在移动端操作，并且交互友好操作便捷</li>
-      <li>支持移动端通知等，让办公协作更便捷</li>
-      <li>完美适配各种移动设备</li>
+      <li>真正移动端友好的体验，所有模块操作流畅便捷</li>
+      <li>结合实时通知，让团队协作突破时空束缚</li>
+      <li>随时随地高效推进，移动办公无界限</li>
     </ul>
   </template>
   <template #image>
@@ -64,16 +57,13 @@ hero:
   </template>
 </FeatureCard>
 
-<FeatureCard
-  title="捍卫数据主权"
-  description="多种部署方式，让数据存管无忧。无论您选择私有化部署还是云服务，都能保障数据安全。"
-  :reverse="true"
->
-  <template #list>
+<FeatureCard title="部署自由，数据无忧" reverse>
+  <template #intro>
+    <p>提供私有化与云端两种部署方案。既保障核心数据的安全与主权，也支持快速注册的云服务，满足不同企业的合规与敏捷需求。</p>
     <ul class="feature-list">
-      <li>支持私有化部署，无忧数据隐私</li>
-      <li>支持云服务，注册即可使用，方便便捷</li>
-      <li>数据安全有保障，符合企业级标准</li>
+      <li>提供私有化与云端两种部署方案</li>
+      <li>保障核心数据的安全与主权</li>
+      <li>满足不同企业的合规与敏捷需求</li>
     </ul>
   </template>
   <template #image>
@@ -81,15 +71,13 @@ hero:
   </template>
 </FeatureCard>
 
-<FeatureCard
-  title="探索 AI 效能"
-  description="深度集成 AI 工具，让您工作更高效。让 AI 成为您工作中的得力助手。"
->
-  <template #list>
+<FeatureCard title="AI赋能，智领未来">
+  <template #intro>
+    <p>深度集成AI能力。不仅支持通过Streamable MCP接入您喜爱的AI工具，更内置AI助手，将重复性工作自动化，释放团队创造力，聚焦高价值战略。</p>
     <ul class="feature-list">
-      <li>支持 Streamable MCP，接入您的 AI 工具，让 AI 为您工作</li>
-      <li>内置 AI 助手，无聊的工作交给 AI，我们干点有趣的事儿（即将推出）</li>
-      <li>智能数据分析，快速获取洞察</li>
+      <li>支持通过Streamable MCP接入您喜爱的AI工具</li>
+      <li>内置AI助手，将重复性工作自动化</li>
+      <li>释放团队创造力，聚焦高价值战略</li>
     </ul>
   </template>
   <template #image>
